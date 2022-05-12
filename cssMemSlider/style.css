@@ -7,8 +7,8 @@
     justify-content: center;
 }
 .wrapper {
-    max-width: 100rem;
-    max-height: 75rem;
+    max-width: 90rem;
+    max-height: 62rem;
     background-color: rgb(48, 48, 48);
     margin: 0 auto;
     border-radius: 1%;
@@ -16,107 +16,172 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
 }
 .carusel{
-    /* padding: 0 20px 0 20px;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    overflow: hidden;
-    justify-content: center;
-    gap: 50px;
-    flex-direction: column; */
     padding: 0 20px 0 20px;
-    overflow: hidden;
     gap: 50px;
-}
-.card{
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     width: 1200px;
+    height: 900px;
+}
+
+.card {
+    width: 600px;
     height: 800px;
-    justify-content: center;
-    align-items: center;
+    opacity: 1;
+    transform: translate(100px);
 }
-.card-best{
-    /* display: none; */
-}
-.card-jack{
-    display: none;
-}
-.card-shreck{
-    display: none;
-}
-.card-mem{
-    display: none;
-}
-.img {
+img {
     border-radius: 1%;
-    min-width: 1200px;
-    min-height: 630px;
-    background-size: contain;
+    min-width: 500px;
+    min-height: 430px;
+    width: 1200px;
+    height: 800px;
+    background-size:cover;
     background-repeat: no-repeat;
 }
-.img-best{
-    background-image: url("./assets/img/boromirmeme.jpeg");
+.card:nth-of-type(1){
+    transform: translate(0px, 400px);
 }
-.img-jack-sparrow{
-    background-image: url("./assets/img/jack\ sparrow.jpeg");
+.card:nth-of-type(2){
+    transform: translate(0px, -450px);
 }
-.img-shreck{
-    background-image: url("./assets/img/shrek4_disneyscreencaps.com_675.0.jpg");
+.card:nth-of-type(3){
+    transform: translate(0px, -1300px);
 }
-.img-mem{
-    background-image: url("./assets/img/bean2.jpeg");
+.card:nth-of-type(4){
+    transform: translate(0px, -2150px);
+}
+.card2{
+    font-size: 2rem;
+    display: inline-block;
+    max-width: 500px;
+    position: relative;
+}
+.sub {
+    display: inline-block;
+}
+.card2:nth-of-type(1) {
+    transform: translate(0, 270px);
+}
+.card2:nth-of-type(2) {
+    transform: translate(0, 85px);
+    opacity: 0;
+}
+.card2:nth-of-type(3) {
+    transform: translate(0, -100px);
+    opacity: 0;
+}
+.card2:nth-of-type(4) {
+    transform: translate(0, -285px);
+    opacity: 0;
 }
 .title {
     font-size: 2rem;
     color: azure;
 }
-.wrapper-controls {
-    /* display: flex;
-    gap: 20px; */
-    display: flex;
-    justify-content: end;
+.slider__radio {
+    display: none;
     gap: 20px;
-    padding-bottom: 50px;
 }
-.circle {
-    /* border: 2px solid rgb(51, 51, 168); */
-    /* background-color: rgb(51, 51, 168); */
-    border-radius: 50%;
-    display: block;
+label {
+    transform: translate(26rem, -33rem);
+    display: inline-block;
     width: 30px;
     height: 30px;
     cursor: pointer;
+    margin: 10px 15px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .8);
+    border-radius: 50%;
+    border: 5px solid #1978d1;
+    background-color: #1978d1;
 }
-input {
-    appearance: none;
-    border: 2px solid rgb(51, 51, 168);;
-    background-color: rgb(51, 51, 168);
-    color: white;
-    transition: 0.2s all linear;
-}
-input:hover {
-    border: 6px solid white;
-    background-color: white
+#slide1:checked~.control label[for="slide1"] {
+    background-color: transparent;
+}   
+
+#slide2:checked~.control label[for="slide2"] {
+    background-color: transparent;
 }
 
-input:checked {
-    border: 6px solid rgb(51, 51, 168);;
-    background-color: transparent
-}
-/* .circle:hover,
-.circle:focus {
-    color: transparent;
-} */
-/* .circle:hover{
-    background-color: transparent;
-    border: 2px solid white;
-}
-.circle:active{
+#slide3:checked~.control label[for="slide3"] {
     background-color: transparent;
 }
-.circle:visited{
+#slide4:checked~.control label[for="slide4"] {
     background-color: transparent;
-} */
+}
+#slide1:hover~.control label[for="slide1"] {
+    background-color: white;
+    border: 5px solid white;
+}   
+
+#slide2:hover~.control label[for="slide2"] {
+    background-color: white;
+    border: 5px solid white;
+}
+
+#slide3:hover~.control label[for="slide3"] {
+    background-color: white;
+    border: 5px solid white;
+}
+#slide4:hover~.control label[for="slide4"] {
+    background-color: white;
+    border: 5px solid white;
+}
+
+#slide1:checked~.carusel .card:nth-of-type(2),
+#slide1:checked~.carusel .card:nth-of-type(3),
+#slide1:checked~.carusel .card:nth-of-type(4),
+#slide1:checked~.carusel .card2:nth-of-type(2),
+#slide1:checked~.carusel .card2:nth-of-type(3),
+#slide1:checked~.carusel .card2:nth-of-type(4){
+    opacity: 0;
+    z-index: -1;
+}
+#slide2:checked~.carusel .card:nth-of-type(1),
+#slide2:checked~.carusel .card2:nth-of-type(1),
+#slide2:checked~.carusel .card:nth-of-type(3),
+#slide2:checked~.carusel .card:nth-of-type(4){
+    opacity: 0;
+    z-index: -1;
+}
+#slide2:checked~.carusel .card2:nth-of-type(2),
+#slide2:checked~.carusel .card:nth-of-type(2){
+    opacity: 1;
+    z-index: 1;
+}
+
+#slide3:checked~.carusel .card:nth-of-type(2),
+#slide3:checked~.carusel .card:nth-of-type(1),
+#slide3:checked~.carusel .card:nth-of-type(4),
+#slide3:checked~.carusel .card2:first-child,
+#slide3:checked~.carusel .card2:nth-of-type(2){
+    opacity: 0;
+    z-index: -1;
+}
+
+#slide3:checked~.carusel .card2:nth-of-type(3){
+    opacity: 1;
+    z-index: 1;
+}
+
+#slide4:checked~.carusel .card:nth-of-type(2),
+#slide4:checked~.carusel .card:nth-of-type(1),
+#slide4:checked~.carusel .card:nth-of-type(3),
+#slide4:checked~.carusel .card2:first-child,
+#slide4:checked~.carusel .card2:nth-of-type(2),
+#slide4:checked~.carusel .card2:nth-of-type(3){
+    opacity: 0;
+    z-index: -1;
+}
+#slide4:checked~.carusel .card2:nth-of-type(4){
+    opacity: 1;
+    z-index: 1;
+}
+
+.card {
+    transition: 1.2s all linear;
+}
