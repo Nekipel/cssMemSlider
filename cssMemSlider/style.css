@@ -204,7 +204,7 @@ label {
         margin-top: 5rem;
     }
     label {
-        transform: translate(13rem, -44rem);
+        transform: translate(13rem, -40rem);
     }
     .card {
         padding-top: 1rem;
@@ -228,16 +228,16 @@ label {
         padding-top: 2rem;
     }
     .card:nth-of-type(1) {
-        transform: translate(0px, 21rem);
+        transform: translate(0px, 24rem);
     }
     .card:nth-of-type(2) {
-        transform: translate(0px, -11rem);
+        transform: translate(0px, -8rem);
     }
     .card:nth-of-type(3) {
-        transform: translate(0px, -43rem);
+        transform: translate(0px, -40rem);
     }
     .card:nth-of-type(4) {
-        transform: translate(0px, -75rem);
+        transform: translate(0px, -72rem);
     }
     .card2:nth-of-type(1) {
         transform: translate(0, 3rem);
