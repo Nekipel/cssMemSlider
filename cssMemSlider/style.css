@@ -1,82 +1,81 @@
 .conteiner {
     background-color: rgb(49, 43, 43);
     height: 100vh;
-    font-size: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .wrapper {
-    max-width: 90rem;
-    max-height: 62rem;
+    max-height: 47rem;
     background-color: rgb(48, 48, 48);
     margin: 0 auto;
     border-radius: 1%;
-    border: 5px solid rgb(80, 76, 76);
+    border: 0.5rem solid rgb(80, 76, 76);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
+    gap: 0;
 }
-.carusel{
-    padding: 0 20px 0 20px;
-    gap: 50px;
-    display: inline-flex;
+.carusel {
+    padding: 2rem 2rem 0 2rem;
     flex-direction: column;
-    width: 1200px;
-    height: 900px;
+    max-width: 54rem;
+    height: 52rem;
 }
 
 .card {
-    width: 600px;
-    height: 800px;
+    max-width: 75rem;
+    max-height: 34rem;
     opacity: 1;
     transform: translate(100px);
+    display: flex;
+    justify-content: center;
 }
 img {
     border-radius: 1%;
-    min-width: 500px;
-    min-height: 430px;
-    width: 1200px;
-    height: 800px;
-    background-size:cover;
+    min-width: 52rem;
+    min-height: 34rem;
+    max-width: 54rem;
+    /* max-height: 50rem; */
+    background-size: cover;
     background-repeat: no-repeat;
 }
-.card:nth-of-type(1){
-    transform: translate(0px, 400px);
+.card:nth-of-type(1) {
+    transform: translate(0px, 25rem);
 }
 .card:nth-of-type(2){
-    transform: translate(0px, -450px);
+    transform: translate(0px, -9rem);
 }
 .card:nth-of-type(3){
-    transform: translate(0px, -1300px);
+    transform: translate(0px, -42rem);
 }
 .card:nth-of-type(4){
-    transform: translate(0px, -2150px);
+    transform: translate(0px, -77rem);
 }
 .card2{
     font-size: 2rem;
     display: inline-block;
-    max-width: 500px;
+    max-width: 39rem;
     position: relative;
 }
 .sub {
     display: inline-block;
 }
 .card2:nth-of-type(1) {
-    transform: translate(0, 270px);
+    transform: translate(0, 7rem);
 }
 .card2:nth-of-type(2) {
-    transform: translate(0, 85px);
+    transform: translate(0, -1rem);
     opacity: 0;
 }
 .card2:nth-of-type(3) {
-    transform: translate(0, -100px);
+    transform: translate(0, -12rem);
     opacity: 0;
 }
 .card2:nth-of-type(4) {
-    transform: translate(0, -285px);
+    transform: translate(0, -24rem);
     opacity: 0;
 }
 .title {
@@ -88,13 +87,13 @@ img {
     gap: 20px;
 }
 label {
-    transform: translate(26rem, -33rem);
+    transform: translate(19rem, -31rem);
     display: inline-block;
     width: 30px;
     height: 30px;
     cursor: pointer;
     margin: 10px 15px;
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .8);
+    box-shadow: 0 0 2px 0 rgb(0 0 0 / 80%);
     border-radius: 50%;
     border: 5px solid #1978d1;
     background-color: #1978d1;
@@ -184,4 +183,62 @@ label {
 
 .card {
     transition: 1.2s all linear;
+}
+
+@media (max-width:1000px) {
+input {
+    display: none;
+}
+.wrapper {
+    max-width: 50rem;
+    max-height: 40rem;
+}
+.conteiner {
+    padding: 0 2rem;
+}
+.wrapper {
+max-width: 58rem;
+width: 100%;
+}
+.carusel {
+    display: flex;
+    flex-direction: column;
+    max-width: 48rem;
+    height: 56rem;
+    width:0;
+}
+.card:nth-of-type(1) {
+    transform: translate(2rem, 1rem);
+}
+.card:nth-of-type(2){
+    transform: translate(1.1rem, -34.2rem);
+}
+.card:nth-of-type(3){
+    transform: translate(1rem, -69.5rem);
+}
+.card:nth-of-type(4){
+    transform: translate(0.5rem, -104.7rem);
+}
+img {
+    border-radius: 1%;
+    max-width: 40rem;
+    max-height: 30rem;
+    min-height: 32rem;
+    object-fit: contain;
+}
+.card2:nth-of-type(1) {
+    transform: translate(0, 41rem);
+}
+.card2:nth-of-type(2) {
+    transform: translate(0, 26rem);
+    opacity: 0;
+}
+.card2:nth-of-type(3) {
+    transform: translate(0, 8rem);
+    opacity: 0;
+}
+.card2:nth-of-type(4) {
+    transform: translate(0, -13rem);
+    opacity: 0;
+} 
 }
